@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didac Sales</title>
+</head>
+<body>
+    <h1>Didac Sales</h1>
+    <table style="border: 1px solid grey">
+        <tr style="border: 1px solid grey">
+            <th style="border: 1px solid grey">Name</th>
+            <th style="border: 1px solid grey">Institute</th>
+            <th style="border: 1px solid grey">Image URL</th>
+            <th style="border: 1px solid grey">Image</th>
+        </tr>
+    {% for d in data %}
+
+            <tr style="border: 1px solid grey">
+                <td style="border: 1px solid grey">{{d.name}}</td>
+                <td style="border: 1px solid grey">{{d.ins}}</td>
+                <td style="border: 1px solid grey">{{d.file.url}} </td>
+                <td style="border: 1px solid grey"><img style="width: 200px;height: auto;" src="{{d.file.url}}" alt="doc"></td>
+            </tr>
+ 
+    
+    
+    {% endfor %}
+</table>
+</body>
+</html>

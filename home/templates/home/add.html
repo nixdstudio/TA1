@@ -1,0 +1,12 @@
+{% extends "home/template.html" %}
+
+{% block body %}
+<form action="/add/" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+</form>
+{% endblock body %}
+
+

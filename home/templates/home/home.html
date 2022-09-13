@@ -1,0 +1,16 @@
+{% extends "home/template.html" %}
+{% block body %}
+<table>
+    {% for d in data %}
+    <tr>
+        <td>{{d.id}}</td>
+        <td>{{d.code}}</td>
+        <td>{{d.name}}</td>
+        <td>{{d.description}}</td>
+        <td><a href="/update/{{d.id}}">Update</a></td>
+    </tr>
+
+{% endfor %}
+</table>
+
+{% endblock body %}
